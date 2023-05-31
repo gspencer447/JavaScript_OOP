@@ -11,17 +11,17 @@ class Person {
       this.hobbies = hobbies;
     }
     addHobby(hobby){
-      this.hobbies = this.hobbies + hobby;
+      hobbies.push(hobby);
     }
     removeHobby(hobby){
-      this.hobbies = this.hobbies - hobby;
+      this.hobbies.splice(this.hobbies.indexOf(hobby), 1);
     }
     greeting(){
-      console.log("Hello fellow person!");
+      console.log('Hello fellow person!');
     }
   }
 
-const person1 = new Person("Graham", 2, "alabama", [])
+const person1 = new Person("Graham", 2, "alabama", ["gaming", "basketball"])
 console.log(person1);
 
 person1.greeting()
@@ -38,7 +38,7 @@ class Coder extends Person{
   }
 }
 
-const = coder1 new Coder("Larry", 4, "Mars", "drums");
+const coder1 = new Coder("Larry", 4, "Mars", "drums");
 console.log(coder1);
 
 //Exercise 3 Section
@@ -48,7 +48,7 @@ const coder2 = new Coder ("Mark", 3, "Michigan", "football");
 console.log(person2);
 console.log(coder2);
 
-Exercise 4
+//Exercise 4 Section
 class Calculator {
   constructor(result = 0){
     this.result = result;
